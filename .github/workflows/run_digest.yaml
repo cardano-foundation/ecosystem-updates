@@ -1,0 +1,33 @@
+name: Monthly GitHub Digest
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # Runs on the 1st day of each month at 00:00 UTC
+  workflow_dispatch:   # Allows manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  generate-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run digest script
+        run: |
+          python digest.py
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add github_digest_*.md
+          git commit -m "Add monthly digest for $(date -u +'%Y-%m-%d')" || echo "No changes to commit"
+          git push
