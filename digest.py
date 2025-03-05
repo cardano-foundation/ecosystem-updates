@@ -3,10 +3,19 @@ import datetime
 
 # List of repositories to track
 repos = [
+    "cardano-foundation/cf-lob-platform",
+    "cardano-foundation/cardano-ibc-incubator",
+    "cardano-foundation/cardano-rosetta-java",
+    "cardano-foundation/cardano-devkit",
+    "cardano-foundation/cf-cardano-ballot",
+    "cardano-foundation/cip30-data-signature-parser",
+    "cardano-foundation/cardano-connect-with-wallet",
+    "cardano-foundation/cf-adahandle-resolver",
+    "cardano-foundation/cf-java-rewards-calculation",
     "bloxbean/cardano-client-lib",
+    "bloxbean/yaci-devkit",
     "bloxbean/yaci",
-    "bloxbean/yaci-store",
-    "bloxbean/yaci-devkit"
+    "bloxbean/yaci-store"
 ]
 
 # GitHub API base URL
@@ -14,11 +23,8 @@ github_api_base = "https://api.github.com/repos/"
 
 # Calculate the start and end dates for the previous calendar month
 now = datetime.datetime.now(datetime.timezone.utc)
-# First day of the current month
 first_day_current_month = datetime.datetime(now.year, now.month, 1)
-# Last day of the previous month is one day before the first day of the current month
 end_date = first_day_current_month - datetime.timedelta(days=1)
-# Start date is the first day of the previous month
 start_date = datetime.datetime(end_date.year, end_date.month, 1)
 
 # GitHub API headers
@@ -28,10 +34,6 @@ headers = {
 
 # Function to fetch GitHub activity within the previous calendar month
 def fetch_github_activity(repo):
-    # Categories:
-    # - issues_opened: issues created during the previous month
-    # - issues_closed: issues closed during the previous month
-    # - pr_merged: pull requests that were merged (and therefore closed) during the previous month
     activity = {"issues_opened": [], "issues_closed": [], "pr_merged": []}
 
     # Fetch PRs and include only those that are merged within the period
@@ -79,22 +81,32 @@ def fetch_github_activity(repo):
 repo_activities = {repo: fetch_github_activity(repo) for repo in repos}
 
 # Create digest text
-digest_content = "# Monthly Digest: Java Tooling GitHub Activities\n\n"
+digest_content = "# Monthly Digest: Ecosystem Tooling - GitHub Activities\n\n"
 digest_content += f"Period: {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}\n\n"
 
+# Only include repositories with activity in the digest
+repos_found = False
 for repo, activity in repo_activities.items():
+    if not (activity["issues_opened"] or activity["pr_merged"] or activity["issues_closed"]):
+        continue  # Skip repositories with no updates
+
+    repos_found = True
     repo_link = f"https://github.com/{repo}"
-    digest_content += f"## [{repo}]({repo_link})\n\n"
+    # Add a bullet icon before each repository
+    digest_content += f"## 🔹 [{repo}]({repo_link})\n\n"
 
     if activity["issues_opened"]:
-        digest_content += "**Issues open:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
+        digest_content += "**Issues opened:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
     if activity["pr_merged"]:
         digest_content += "**PRs merged & closed:**\n" + "\n".join(activity["pr_merged"]) + "\n\n"
     if activity["issues_closed"]:
         digest_content += "**Issues closed:**\n" + "\n".join(activity["issues_closed"]) + "\n\n"
 
-    if not (activity["issues_opened"] or activity["pr_merged"] or activity["issues_closed"]):
-        digest_content += "_No significant activity in this period._\n\n"
+if not repos_found:
+    digest_content += "No significant activity in this period.\n"
+
+# Add a closing phrase with a nice message and an emoji
+digest_content += "\n---\n\nLet's keep building! 🚀\n"
 
 # Generate file name with month and year (e.g., github_digest_February_2025.md)
 filename = f"github_digest_{end_date.strftime('%B_%Y')}.md"
