@@ -2,38 +2,6 @@
 
 Period: 2025-02-01 to 2025-02-28
 
-## 🔹 [cardano-foundation/cf-lob-platform](https://github.com/cardano-foundation/cf-lob-platform)
-
-**Issues opened:**
-- [#149 - Idea: document transactions and reports metadata as part of CIP-10 registry entry for better discoverability](https://github.com/cardano-foundation/cf-reeve-platform/issues/149)
-- [#148 - Idea: explore alternative sinks, e.g. Plutus based sink for transactions and reports](https://github.com/cardano-foundation/cf-reeve-platform/issues/148)
-- [#147 - Community: CIP for Transactions and Reports on chain data](https://github.com/cardano-foundation/cf-reeve-platform/issues/147)
-
-**PRs merged & closed:**
-- [#166 - feat: first approach for event tests](https://github.com/cardano-foundation/cf-reeve-platform/pull/166)
-- [#165 - feat: organisation create and edit endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/165)
-- [#164 - fix: be reconciliation result no filter returns all transactions](https://github.com/cardano-foundation/cf-reeve-platform/pull/164)
-- [#163 - chore: adjusting authorization for reconcile endpoints according to P…](https://github.com/cardano-foundation/cf-reeve-platform/pull/163)
-- [#162 - feat: add data about last reconcilation + refactored](https://github.com/cardano-foundation/cf-reeve-platform/pull/162)
-- [#161 - fix: rename description field to taxIdNumber](https://github.com/cardano-foundation/cf-reeve-platform/pull/161)
-- [#160 - fix: kafka couldn't deserialize blockchain receipt](https://github.com/cardano-foundation/cf-reeve-platform/pull/160)
-- [#157 - chore : chart of account sub type](https://github.com/cardano-foundation/cf-reeve-platform/pull/157)
-- [#156 - chore :Enrich Report public interface with a currency field](https://github.com/cardano-foundation/cf-reeve-platform/pull/156)
-- [#155 - chore(follower-app): normalize some environment variables across profiles](https://github.com/cardano-foundation/cf-reeve-platform/pull/155)
-- [#154 - fix: fixing test](https://github.com/cardano-foundation/cf-reeve-platform/pull/154)
-- [#153 - Fix/set default value for mnemonic](https://github.com/cardano-foundation/cf-reeve-platform/pull/153)
-- [#152 - fix: added check to avoid pkey violation](https://github.com/cardano-foundation/cf-reeve-platform/pull/152)
-- [#151 - fix: extended tests refactored code](https://github.com/cardano-foundation/cf-reeve-platform/pull/151)
-- [#150 - Fix: Be incorrect reason for pending transaction status](https://github.com/cardano-foundation/cf-reeve-platform/pull/150)
-- [#146 - Feat/lob 906 public interface published transactions](https://github.com/cardano-foundation/cf-reeve-platform/pull/146)
-- [#145 - feat: [LOB-903] Public Interface - Published report for public view endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/145)
-- [#144 - chore: added security roles for saving/updating/deleting dashboards](https://github.com/cardano-foundation/cf-reeve-platform/pull/144)
-- [#143 - bugfix : [LOB-871] WatchDog service miss update event call](https://github.com/cardano-foundation/cf-reeve-platform/pull/143)
-- [#142 - fix: can't save submetrics](https://github.com/cardano-foundation/cf-reeve-platform/pull/142)
-- [#141 - feat: externalizing events](https://github.com/cardano-foundation/cf-reeve-platform/pull/141)
-- [#140 - feat: adding new metrics for incomeStatement and balanceSheet](https://github.com/cardano-foundation/cf-reeve-platform/pull/140)
-- [#139 - fix: adjusting categories](https://github.com/cardano-foundation/cf-reeve-platform/pull/139)
-- [#138 - feat: [LOB-555] accounting type sub type endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/138)
 
 ## 🔹 [cardano-foundation/cardano-ibc-incubator](https://github.com/cardano-foundation/cardano-ibc-incubator)
 
