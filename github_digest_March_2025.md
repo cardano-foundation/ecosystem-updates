@@ -2,36 +2,6 @@
 
 Period: 2025-03-01 to 2025-03-31
 
-## 🔹 [cardano-foundation/cf-lob-platform](https://github.com/cardano-foundation/cf-lob-platform)
-
-**PRs merged & closed:**
-- [#194 - fix: Fields parent codes from event code to reference codes](https://github.com/cardano-foundation/cf-reeve-platform/pull/194)
-- [#193 - bug: Income statement setting mixing fields FinancialRevenues with FinancialExpenses](https://github.com/cardano-foundation/cf-reeve-platform/pull/193)
-- [#192 - fix: adding missing fields to income statement publish](https://github.com/cardano-foundation/cf-reeve-platform/pull/192)
-- [#191 - Feat/lob 1037 be status pending reason and data display](https://github.com/cardano-foundation/cf-reeve-platform/pull/191)
-- [#190 - fix: fixing skipped transactions if fcy is non zero](https://github.com/cardano-foundation/cf-reeve-platform/pull/190)
-- [#189 - feat: added sbom generation](https://github.com/cardano-foundation/cf-reeve-platform/pull/189)
-- [#188 - fix: refreshing token before every call](https://github.com/cardano-foundation/cf-reeve-platform/pull/188)
-- [#187 - fix: adding system if no authenticated user is available](https://github.com/cardano-foundation/cf-reeve-platform/pull/187)
-- [#186 - feat: CRUD for chart of account](https://github.com/cardano-foundation/cf-reeve-platform/pull/186)
-- [#185 - chore: removing deprecated endpoints](https://github.com/cardano-foundation/cf-reeve-platform/pull/185)
-- [#183 - fix: reconciliation_count_error](https://github.com/cardano-foundation/cf-reeve-platform/pull/183)
-- [#182 - feat: CRUD for event codes](https://github.com/cardano-foundation/cf-reeve-platform/pull/182)
-- [#181 - fix: extraction filter by costcenter](https://github.com/cardano-foundation/cf-reeve-platform/pull/181)
-- [#180 - fix: transactions without items](https://github.com/cardano-foundation/cf-reeve-platform/pull/180)
-- [#179 - chore(follower-app): add profiles for the different networks](https://github.com/cardano-foundation/cf-reeve-platform/pull/179)
-- [#178 - feat: added oAuth2.0 support](https://github.com/cardano-foundation/cf-reeve-platform/pull/178)
-- [#177 - fix: organisation websiteUrl property](https://github.com/cardano-foundation/cf-reeve-platform/pull/177)
-- [#176 - fix: organisation public endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/176)
-- [#175 - feat: preparing build for name change](https://github.com/cardano-foundation/cf-reeve-platform/pull/175)
-- [#174 - feat: Enrich extraction endpoint to include accountType and accountSu…](https://github.com/cardano-foundation/cf-reeve-platform/pull/174)
-- [#173 - fix: change organisation update endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/173)
-- [#172 - chore: removed modulith dependency](https://github.com/cardano-foundation/cf-reeve-platform/pull/172)
-- [#171 - Chore/split organisation endpoint test coverage tests](https://github.com/cardano-foundation/cf-reeve-platform/pull/171)
-- [#170 - feat: Adding operation type to transactionitem](https://github.com/cardano-foundation/cf-reeve-platform/pull/170)
-- [#169 - fix: report validation second solution](https://github.com/cardano-foundation/cf-reeve-platform/pull/169)
-- [#168 - chore: split organisation endpoint in create and update](https://github.com/cardano-foundation/cf-reeve-platform/pull/168)
-- [#159 - Docs: verify readme files quality](https://github.com/cardano-foundation/cf-reeve-platform/pull/159)
 
 ## 🔹 [cardano-foundation/cardano-ibc-incubator](https://github.com/cardano-foundation/cardano-ibc-incubator)
 
