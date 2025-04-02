@@ -5,7 +5,6 @@ Welcome to our monthly digest repository — your go-to source for the latest Gi
 This digest keeps you informed on new issues, closed issues, and merged pull requests, ensuring you never miss a beat in our evolving ecosystem. 💡📊
 
 ### Projects Covered:
-- [cardano-foundation/cf-lob-platform](https://github.com/cardano-foundation/cf-lob-platform) 🔗
 - [cardano-foundation/cardano-ibc-incubator](https://github.com/cardano-foundation/cardano-ibc-incubator) 🔗
 - [cardano-foundation/cardano-rosetta-java](https://github.com/cardano-foundation/cardano-rosetta-java) 🔗
 - [cardano-foundation/cardano-devkit](https://github.com/cardano-foundation/cardano-devkit) 🔗
