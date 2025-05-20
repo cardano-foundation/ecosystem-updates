@@ -2,46 +2,6 @@
 
 Period: 2025-04-01 to 2025-04-30
 
-## 🔹 [cardano-foundation/cf-lob-platform](https://github.com/cardano-foundation/cf-lob-platform)
-
-**PRs merged & closed:**
-- [#232 - feat: Speeding up Batchstatistic calculation](https://github.com/cardano-foundation/cf-reeve-platform/pull/232)
-- [#231 - fix: saving opening balance enum as string](https://github.com/cardano-foundation/cf-reeve-platform/pull/231)
-- [#230 - feat: renaming report fields](https://github.com/cardano-foundation/cf-reeve-platform/pull/230)
-- [#229 - Feat/lob 1152 be create new role accountant in backend and api](https://github.com/cardano-foundation/cf-reeve-platform/pull/229)
-- [#228 - feat: negative values in the view when type = FxRevaluation](https://github.com/cardano-foundation/cf-reeve-platform/pull/228)
-- [#227 - feat: adding optional parameter to get specific organisations from an…](https://github.com/cardano-foundation/cf-reeve-platform/pull/227)
-- [#226 - fix: adding test profile](https://github.com/cardano-foundation/cf-reeve-platform/pull/226)
-- [#225 - feat: return createdBy updatedBy on reportList](https://github.com/cardano-foundation/cf-reeve-platform/pull/225)
-- [#224 - fix: adding dev profile to submission services](https://github.com/cardano-foundation/cf-reeve-platform/pull/224)
-- [#223 -  fix: reference code can't unlink parent](https://github.com/cardano-foundation/cf-reeve-platform/pull/223)
-- [#222 - docs: Links not working on readme](https://github.com/cardano-foundation/cf-reeve-platform/pull/222)
-- [#221 - fix: BatchStatus was not updated + Search for batch wasn't working ](https://github.com/cardano-foundation/cf-reeve-platform/pull/221)
-- [#220 - Fix/lob 1148 api publisher production profile fail to run migrations](https://github.com/cardano-foundation/cf-reeve-platform/pull/220)
-- [#219 - fix: FxRrevaluation sum only CREDIT tx](https://github.com/cardano-foundation/cf-reeve-platform/pull/219)
-- [#218 - Feat/add pagination support to netsuiteclient](https://github.com/cardano-foundation/cf-reeve-platform/pull/218)
-- [#217 - fix: wrong object used for mapping](https://github.com/cardano-foundation/cf-reeve-platform/pull/217)
-- [#216 - fix: getCurrentUser in AuthenticationUserService returnedNull](https://github.com/cardano-foundation/cf-reeve-platform/pull/216)
-- [#215 - fix: transaction_erp_bc reconciliation](https://github.com/cardano-foundation/cf-reeve-platform/pull/215)
-- [#214 - fix: in audited environments the auditorprovider will overwrite the c…](https://github.com/cardano-foundation/cf-reeve-platform/pull/214)
-- [#213 - fix: setting parent now as a string](https://github.com/cardano-foundation/cf-reeve-platform/pull/213)
-- [#212 - Feat/lob 1122 validate setup of organization](https://github.com/cardano-foundation/cf-reeve-platform/pull/212)
-- [#211 - fix: [BE] Published transactions fails reconciliation when it is exec…](https://github.com/cardano-foundation/cf-reeve-platform/pull/211)
-- [#210 - fix: anonymous users couldn't access public interfaces due to the org…](https://github.com/cardano-foundation/cf-reeve-platform/pull/210)
-- [#209 - feat: added dateTo and Source](https://github.com/cardano-foundation/cf-reeve-platform/pull/209)
-- [#208 - feat: implement mutation test](https://github.com/cardano-foundation/cf-reeve-platform/pull/208)
-- [#207 - feat: setting created user when new extraction is triggered](https://github.com/cardano-foundation/cf-reeve-platform/pull/207)
-- [#206 - Feat/lob 1048 be attach organisation id to the user in keycloak](https://github.com/cardano-foundation/cf-reeve-platform/pull/206)
-- [#205 - Feat/lob 1119 be add parent field to cost center and project](https://github.com/cardano-foundation/cf-reeve-platform/pull/205)
-- [#204 - feat: adding publish date to report entity](https://github.com/cardano-foundation/cf-reeve-platform/pull/204)
-- [#203 - fix: chart of account update](https://github.com/cardano-foundation/cf-reeve-platform/pull/203)
-- [#202 - feat: adding configurable csp header](https://github.com/cardano-foundation/cf-reeve-platform/pull/202)
-- [#201 - Feat/lob 1078 be ref cod and event code delete endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/201)
-- [#199 - fix: missing parameters in view response of Chart of Accounts](https://github.com/cardano-foundation/cf-reeve-platform/pull/199)
-- [#198 - feat: Transactions - Currency selection](https://github.com/cardano-foundation/cf-reeve-platform/pull/198)
-- [#197 - Feat/lob 1048 be attach organisation id to the user in keycloak](https://github.com/cardano-foundation/cf-reeve-platform/pull/197)
-- [#196 - Feat/lob 1027 be automatic generation of reports](https://github.com/cardano-foundation/cf-reeve-platform/pull/196)
-
 ## 🔹 [cardano-foundation/cardano-rosetta-java](https://github.com/cardano-foundation/cardano-rosetta-java)
 
 **Issues opened:**
