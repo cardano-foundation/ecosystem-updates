@@ -8,6 +8,7 @@ repos = [
     "cardano-foundation/cardano-rosetta-java",
     "cardano-foundation/cardano-devkit",
     "cardano-foundation/cf-cardano-ballot",
+    "cardano-foundation/cip113-programmable-tokens",
     "cardano-foundation/cip30-data-signature-parser",
     "cardano-foundation/cardano-connect-with-wallet",
     "cardano-foundation/cf-adahandle-resolver",
