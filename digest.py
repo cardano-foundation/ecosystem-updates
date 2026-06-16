@@ -3,7 +3,6 @@ import datetime
 
 # List of repositories to track
 repos = [
-    "cardano-foundation/cf-lob-platform",
     "cardano-foundation/cardano-ibc-incubator",
     "cardano-foundation/cardano-rosetta-java",
     "cardano-foundation/cardano-devkit",
