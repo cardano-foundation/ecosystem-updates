@@ -15,6 +15,8 @@ repos = [
     "cardano-foundation/cardano-connect-with-wallet",
     "cardano-foundation/cf-adahandle-resolver",
     "cardano-foundation/cf-java-rewards-calculation",
+    "cardano-foundation/x402",
+    "cardano-foundation/cardano-templates",
     "bloxbean/cardano-client-lib",
     "bloxbean/yaci-devkit",
     "bloxbean/yaci",
