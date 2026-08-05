@@ -17,6 +17,7 @@ repos = [
     "cardano-foundation/cf-java-rewards-calculation",
     "cardano-foundation/x402",
     "cardano-foundation/cardano-templates",
+    "cardano-foundation/cardano-graphql",
     "bloxbean/cardano-client-lib",
     "bloxbean/yaci-devkit",
     "bloxbean/yaci",
