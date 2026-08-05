@@ -20,6 +20,9 @@ repos = [
     "bloxbean/cardano-client-lib",
     "bloxbean/yaci-devkit",
     "bloxbean/yaci",
+    "bloxbean/julc",
+    "bloxbean/yano",
+    "bloxbean/zeroj,
     "bloxbean/yaci-store"
 ]
 
