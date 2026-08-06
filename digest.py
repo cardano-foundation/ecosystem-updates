@@ -62,6 +62,8 @@ repos = [
     "cardano-foundation/aiken-lucid-yaci-dev-kit-starter-kit",
     "cardano-foundation/cardano-verify-datasignature",
     "cardano-foundation/cf-cddl-parser",
+    "cardano-foundation/cardano-graphql-yaci",
+    
 
     # bloxbean
     "bloxbean/cardano-client-lib",
