@@ -32,7 +32,6 @@ repos = [
     "cardano-foundation/cardano-dev-skills",
     "cardano-foundation/cardano-token-registry",
     "cardano-foundation/cardano-x402-facilitator",
-    "cardano-foundation/cf-explorer-landing",
     "cardano-foundation/cf-explorer-status",
     "cardano-foundation/cf-token-metadata-registry",
     "cardano-foundation/cf-token-metadata-registry-status",
