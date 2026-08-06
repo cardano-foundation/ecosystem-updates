@@ -66,12 +66,21 @@ repos = [
 
     # bloxbean
     "bloxbean/cardano-client-lib",
-    "bloxbean/yaci-devkit",
+    "bloxbean/cardano-client-bindings",
+    "bloxbean/cardano-client-examples",
+    "bloxbean/cardano-client-lib-docs",
     "bloxbean/yaci",
-    "bloxbean/julc",
-    "bloxbean/yano",
-    "bloxbean/zeroj",
+    "bloxbean/yaci-devkit",
     "bloxbean/yaci-store",
+    "bloxbean/yaci-store-plugins",
+    "bloxbean/yaci-cardano-test-sample",
+    "bloxbean/yano",
+    "bloxbean/julc",
+    "bloxbean/julc-examples",
+    "bloxbean/julc-helloworld",
+    "bloxbean/zeroj",
+    "bloxbean/zeroj-usecases",
+    "bloxbean/devkit-hackathon-demo",
 ]
 
 # GitHub API base URL
