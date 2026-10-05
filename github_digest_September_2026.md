@@ -373,21 +373,6 @@ Period: 2026-09-01 to 2026-09-30
 - [#700 - feat: [LOB-1606] [BE] Update Transaction validation logic](https://github.com/cardano-foundation/cf-reeve-platform/pull/700)
 - [#699 - feat: [LOB-2303] [BE] Add Accounting Regime field to report templates…](https://github.com/cardano-foundation/cf-reeve-platform/pull/699)
 
-## 🔹 [cardano-foundation/cf-reeve-frontend](https://github.com/cardano-foundation/cf-reeve-frontend)
-
-**PRs merged & closed:**
-- [#768 - fix/LOB-2355 Alert All Batches error](https://github.com/cardano-foundation/cf-reeve-frontend/pull/768)
-- [#766 - feat/LOB-2364 Added edit and delete for projects, sub projects and mi…](https://github.com/cardano-foundation/cf-reeve-frontend/pull/766)
-- [#767 - fix/LOB-2367 Monetary column alignment](https://github.com/cardano-foundation/cf-reeve-frontend/pull/767)
-- [#765 - fix/LOB-1402 Added Reference code dropdown](https://github.com/cardano-foundation/cf-reeve-frontend/pull/765)
-- [#763 - release/1.7.2](https://github.com/cardano-foundation/cf-reeve-frontend/pull/763)
-- [#760 - feat/LOB-2343 Report Modal Hierarchy](https://github.com/cardano-foundation/cf-reeve-frontend/pull/760)
-- [#764 - feat/LOB-1402 Added toolbar and drawer with search and is active filt…](https://github.com/cardano-foundation/cf-reeve-frontend/pull/764)
-- [#762 - fix/LOB-2352 Fixed the event duplicate check to match the backend](https://github.com/cardano-foundation/cf-reeve-frontend/pull/762)
-- [#761 - feat/LOB-1400 Chart of Accounts Filter and Toolbar](https://github.com/cardano-foundation/cf-reeve-frontend/pull/761)
-- [#759 - Add cost centers test cases, smoke package and QA threshold](https://github.com/cardano-foundation/cf-reeve-frontend/pull/759)
-- [#758 - feat/LOB-2302 Accounting regime field](https://github.com/cardano-foundation/cf-reeve-frontend/pull/758)
-
 ## 🔹 [cardano-foundation/cf-reeve-indexer](https://github.com/cardano-foundation/cf-reeve-indexer)
 
 **PRs merged & closed:**
@@ -398,11 +383,6 @@ Period: 2026-09-01 to 2026-09-30
 - [#84 - feat: [LOB-1305] [BE] Ingest and expose Accounting Regime on indexed …](https://github.com/cardano-foundation/cf-reeve-indexer/pull/84)
 - [#87 - [LOB-2349] [BE] Fix schema/parsing mismatch for on-chain metadata tex…](https://github.com/cardano-foundation/cf-reeve-indexer/pull/87)
 - [#85 - feat: [LOB-2306] Accounting regime implementation](https://github.com/cardano-foundation/cf-reeve-indexer/pull/85)
-
-## 🔹 [cardano-foundation/cf-reeve-docs](https://github.com/cardano-foundation/cf-reeve-docs)
-
-**PRs merged & closed:**
-- [#6 - docs: [LOB-2307] [Docs] Document the Accounting Regime field in cf-re…](https://github.com/cardano-foundation/cf-reeve-docs/pull/6)
 
 ## 🔹 [cardano-foundation/hermes-relayer](https://github.com/cardano-foundation/hermes-relayer)
 
@@ -803,6 +783,35 @@ Period: 2026-09-01 to 2026-09-30
 **Issues closed:**
 - [#133 - Tx validation computes wrong current epoch: Scalus SlotConfig adapter drops epochLength and zeroEpoch](https://github.com/bloxbean/yano/issues/133)
 - [#106 - Upgrade Scalus 0.18.2 → 1.x (keep pool-deposit override until fixed upstream)](https://github.com/bloxbean/yano/issues/106)
+
+## 🔹 [bloxbean/yano-x](https://github.com/bloxbean/yano-x)
+
+**Issues opened:**
+- [#26 - EUTxO bridge: first withdrawal settlement halts settlement chain (deposit observer rejects batch settlement marker)](https://github.com/bloxbean/yano-x/issues/26)
+- [#25 - Policy plane: declare post-state facts on stock kernels (balances, kv-registry, doc-trail, approvals)](https://github.com/bloxbean/yano-x/issues/25)
+- [#23 - Node stuck permanently on cardano-history-chain after a missed L1-referenced proposal (no catch-up)](https://github.com/bloxbean/yano-x/issues/23)
+- [#22 - Tutorial 1: `cluster start 3` only creates orders-chain, not registry-chain and effects-chain](https://github.com/bloxbean/yano-x/issues/22)
+- [#8 - Declare product genesis profiles in YAML instead of Java](https://github.com/bloxbean/yano-x/issues/8)
+- [#5 - ADR-012 migration to Yano ADR-037 certified observations](https://github.com/bloxbean/yano-x/issues/5)
+
+**PRs merged & closed:**
+- [#24 - Update version to 0.1.0-pre3](https://github.com/bloxbean/yano-x/pull/24)
+- [#21 - feat(composition): implement ADR-031.1 declarative event bindings](https://github.com/bloxbean/yano-x/pull/21)
+- [#20 - Update version and enable GitHub release](https://github.com/bloxbean/yano-x/pull/20)
+- [#19 - Update version to 0.1.0-pre2-dev1](https://github.com/bloxbean/yano-x/pull/19)
+- [#18 - ci: approval-gated release pipeline (release-staging, tag approval, in-memory signing)](https://github.com/bloxbean/yano-x/pull/18)
+- [#17 - Publish the plugin pack, deploy tool, and Studio as standalone release archives](https://github.com/bloxbean/yano-x/pull/17)
+- [#16 - Release one Yano X JVM distribution (~513 MB) and fix the docs site build](https://github.com/bloxbean/yano-x/pull/16)
+- [#15 - docs: modernize the Yano X site for pre1](https://github.com/bloxbean/yano-x/pull/15)
+- [#14 - refactor: move Yano X to org.yanoproject.x and consume the released org.yanoproject host](https://github.com/bloxbean/yano-x/pull/14)
+- [#12 - build: publish five release distributions](https://github.com/bloxbean/yano-x/pull/12)
+- [#9 - Add six products on stock state machines, with console signing modes and guided operation](https://github.com/bloxbean/yano-x/pull/9)
+- [#6 - feat(observations): reporter SDK, references, and qualification tooling](https://github.com/bloxbean/yano-x/pull/6)
+- [#7 - Streamline multi-chain deployment, Studio, and operator workflows](https://github.com/bloxbean/yano-x/pull/7)
+- [#10 - ADR-037 Phase 5: packaged qualification and compatibility gates](https://github.com/bloxbean/yano-x/pull/10)
+- [#11 - fix(observations): qualify source-bound shipment profiles against reviewed host](https://github.com/bloxbean/yano-x/pull/11)
+- [#4 - feat: add EUTXO product and hardened deployment tooling](https://github.com/bloxbean/yano-x/pull/4)
+- [#3 - feat: add multi-provider deployment automation and EUTxO UI](https://github.com/bloxbean/yano-x/pull/3)
 
 ## 🔹 [bloxbean/julc](https://github.com/bloxbean/julc)
 
