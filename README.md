@@ -76,6 +76,8 @@ This digest keeps you informed on new issues, closed issues, and merged pull req
 - [bloxbean/yaci-store-plugins](https://github.com/bloxbean/yaci-store-plugins) 🔗
 - [bloxbean/yaci-cardano-test-sample](https://github.com/bloxbean/yaci-cardano-test-sample) 🔗
 - [bloxbean/yano](https://github.com/bloxbean/yano) 🔗
+- [bloxbean/yano-x](https://github.com/bloxbean/yano-x) 🔗
+- [bloxbean/yano-x-examples](https://github.com/bloxbean/yano-x-examples) 🔗
 - [bloxbean/julc](https://github.com/bloxbean/julc) 🔗
 - [bloxbean/julc-examples](https://github.com/bloxbean/julc-examples) 🔗
 - [bloxbean/julc-helloworld](https://github.com/bloxbean/julc-helloworld) 🔗

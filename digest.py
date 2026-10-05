@@ -77,6 +77,8 @@ repos = [
     "bloxbean/yaci-store-plugins",
     "bloxbean/yaci-cardano-test-sample",
     "bloxbean/yano",
+    "bloxbean/yano-x",
+    "bloxbean/yano-x-examples",
     "bloxbean/julc",
     "bloxbean/julc-examples",
     "bloxbean/julc-helloworld",
