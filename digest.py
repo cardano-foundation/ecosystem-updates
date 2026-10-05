@@ -1,3 +1,4 @@
+import os
 import requests
 import datetime
 
@@ -76,6 +77,8 @@ repos = [
     "bloxbean/yaci-store-plugins",
     "bloxbean/yaci-cardano-test-sample",
     "bloxbean/yano",
+    "bloxbean/yano-x",
+    "bloxbean/yano-x-examples",
     "bloxbean/julc",
     "bloxbean/julc-examples",
     "bloxbean/julc-helloworld",
@@ -93,53 +96,87 @@ first_day_current_month = datetime.datetime(now.year, now.month, 1)
 end_date = first_day_current_month - datetime.timedelta(days=1)
 start_date = datetime.datetime(end_date.year, end_date.month, 1)
 
+# The period covers everything up to (but not including) the first day of the current month,
+# so activity during the whole last day of the previous month is included
+def in_period(date):
+    return start_date <= date < first_day_current_month
+
+def parse_date(value):
+    return datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
+
 # GitHub API headers
 headers = {
     "Accept": "application/vnd.github.v3+json"
 }
 
+# Authenticate to avoid the 60 requests/hour limit for anonymous requests
+github_token = os.environ.get("GITHUB_TOKEN")
+if github_token:
+    headers["Authorization"] = f"Bearer {github_token}"
+else:
+    print("Warning: GITHUB_TOKEN is not set, requests are limited to 60 per hour and the digest may be incomplete")
+
+# Fetch a page of results; returns None if the repository does not exist
+def fetch_page(url, params=None):
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 404:
+        return None
+    # Fail loudly on rate limits and other errors instead of silently producing an incomplete digest
+    response.raise_for_status()
+    return response
+
 # Function to fetch GitHub activity within the previous calendar month
 def fetch_github_activity(repo):
     activity = {"issues_opened": [], "issues_closed": [], "pr_merged": []}
 
-    # Fetch PRs and include only those that are merged within the period
-    prs_url = f"{github_api_base}{repo}/pulls?state=all&per_page=100"
-    response = requests.get(prs_url, headers=headers)
-    if response.status_code == 200:
+    # Fetch PRs, most recently updated first, and include only those that are merged within the period.
+    # A PR merged within the period was updated at or after the start date, so stop once older ones are reached.
+    url = f"{github_api_base}{repo}/pulls"
+    params = {"state": "all", "sort": "updated", "direction": "desc", "per_page": 100}
+    while url:
+        response = fetch_page(url, params)
+        if response is None:
+            print(f"Warning: repository {repo} not found, skipping")
+            return activity
         prs = response.json()
         for pr in prs:
             merged_at = pr.get("merged_at")
-            if merged_at:
-                merged_date = datetime.datetime.strptime(merged_at, "%Y-%m-%dT%H:%M:%SZ")
-                if start_date <= merged_date <= end_date:
-                    pr_link = pr["html_url"]
-                    pr_number = pr["number"]
-                    pr_title = pr["title"]
-                    activity["pr_merged"].append(f"- [#{pr_number} - {pr_title}]({pr_link})")
+            if merged_at and in_period(parse_date(merged_at)):
+                pr_link = pr["html_url"]
+                pr_number = pr["number"]
+                pr_title = pr["title"]
+                activity["pr_merged"].append(f"- [#{pr_number} - {pr_title}]({pr_link})")
+        if not prs or parse_date(prs[-1]["updated_at"]) < start_date:
+            break
+        # The "next" link already contains the query parameters
+        url = response.links.get("next", {}).get("url")
+        params = None
 
-    # Fetch issues (excluding PRs)
-    issues_url = f"{github_api_base}{repo}/issues?state=all&per_page=100"
-    response = requests.get(issues_url, headers=headers)
-    if response.status_code == 200:
-        issues = response.json()
-        for issue in issues:
+    # Fetch issues (excluding PRs) updated since the start of the period
+    url = f"{github_api_base}{repo}/issues"
+    params = {"state": "all", "since": start_date.strftime("%Y-%m-%dT%H:%M:%SZ"), "per_page": 100}
+    while url:
+        response = fetch_page(url, params)
+        if response is None:
+            break
+        for issue in response.json():
             # Skip items that are actually PRs
             if "pull_request" in issue:
                 continue
 
-            created_at = datetime.datetime.strptime(issue["created_at"], "%Y-%m-%dT%H:%M:%SZ")
+            created_at = parse_date(issue["created_at"])
             closed_at = issue.get("closed_at")
             issue_link = issue["html_url"]
             issue_number = issue["number"]
             issue_title = issue["title"]
 
-            if start_date <= created_at <= end_date:
+            if in_period(created_at):
                 activity["issues_opened"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
 
-            if closed_at:
-                closed_date = datetime.datetime.strptime(closed_at, "%Y-%m-%dT%H:%M:%SZ")
-                if start_date <= closed_date <= end_date:
-                    activity["issues_closed"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
+            if closed_at and in_period(parse_date(closed_at)):
+                activity["issues_closed"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
+        url = response.links.get("next", {}).get("url")
+        params = None
 
     return activity
 
